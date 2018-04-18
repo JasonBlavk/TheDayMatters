@@ -2,14 +2,14 @@
 
 .userinfo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .userinfo-avatar {
-  align-self: center;
+  /* align-self: center; */
   width: 128rpx;
   height: 128rpx;
-  margin: 20rpx;
+  margin: 30rpx;
   border-radius: 50%;
 }
 
@@ -27,11 +27,11 @@
 
 .location {
   background-color: "#f00";
+  margin-top: 40rpx;
   padding-left: 20rpx;
   padding-right: 20rpx;
   width: 94%;
-  height: 400rpx;
-
+  height: 800rpx;
 }
 
 .list-container {

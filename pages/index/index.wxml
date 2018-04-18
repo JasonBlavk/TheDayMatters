@@ -3,13 +3,11 @@
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
-      <image bindtap="moveToLocation" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-
-  <map class="location" id="mapId" show-location="true" latitude="{{latitude}}" longitude="{{longitude}}"></map>
-  
+    
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
@@ -20,6 +18,8 @@
       <text class='movie-director'>{{movie.directorName}}</text>
     </view>
   </view>
+  <map class="location" id="mapId" show-location="true" latitude="{{latitude}}" longitude="{{longitude}}"></map>
+
   <!-- <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
   </scroll-view> -->
 

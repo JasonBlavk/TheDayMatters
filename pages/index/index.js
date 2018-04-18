@@ -7,7 +7,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '最近热映',
+    motto: '热门赛事',
     userInfo: {},
     hasUserInfo: false,
     latitude: 31.23, 
@@ -25,7 +25,6 @@ Page({
       });
       console.log(that.data.hotMovies[0])
     });  
-
     // wx.navigateTo({
     //   url: '../home/home'
     // })
@@ -84,6 +83,7 @@ Page({
     })
   },
   onReady:function(){
+    this.bindViewTap()
     wx.getLocation({
       type: 'wgs84',
       success: (res) => {
