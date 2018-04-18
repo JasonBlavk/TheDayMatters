@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="moveToLocation" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <map class="location" id="mapId" show-location="true" latitude="{{latitude}}" longitude="{{longitude}}"></map>
+  
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+  <view wx:for="{{hotMovies}}" wx:for-index="index" wx:for-item="movie" class='list-container'>
+    <view class='list-block'>
+      <image src="{{movie.img}}" class="movie-img"></image>
+      <text class='movie-director'>{{movie.directorName}}</text>
+    </view>
+  </view>
+  <!-- <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+  </scroll-view> -->
+
+</view>
