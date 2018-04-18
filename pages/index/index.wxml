@@ -7,17 +7,31 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-    
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="user-event-container">
+    <view class='user-top-space'></view>
+    <text class="user-event">{{myEvent}}</text>
+    <!-- <text class="user-event-list">{{myEvent}}</text> -->
+    <view class='my-event-list'>
+      <view wx:for="{{myEvents}}" wx:for-index="index" wx:for-item="event" data-event-name="{{event.eventName}}" bindtap="clickMyEvent">
+        <view class='my-event-list-block'>
+          <!-- <image src="{{event.img}}" class="movie-img"></image> -->
+          <text class='event-name'>{{event.eventName}}</text>
+          <text class='event-number'>参赛号：{{event.number}}</text>
+        </view>
+      </view>
+    </view>
   </view>
 
-  <view wx:for="{{hotMovies}}" wx:for-index="index" wx:for-item="movie" class='list-container'>
-    <view class='list-block'>
+
+
+  <view class="hot-event-containner">
+    <text class="hot-event">{{hotEvent}}</text>
+    <view wx:for="{{hotMovies}}" wx:for-index="index" wx:for-item="movie" class='hot-event-list'>
       <image src="{{movie.img}}" class="movie-img"></image>
       <text class='movie-director'>{{movie.directorName}}</text>
     </view>
   </view>
+
   <map class="location" id="mapId" show-location="true" latitude="{{latitude}}" longitude="{{longitude}}"></map>
 
   <!-- <scroll-view class="scroll-view_H" scroll-x style="width: 100%">

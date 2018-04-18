@@ -7,16 +7,34 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '热门赛事',
+    myEvent: '我的赛事',
+    hotEvent: '热门赛事',
+    myEvents: [{ "eventName": "2018柴古唐斯-括苍山越野赛", "number": "007" },
+    { "eventName": "2018莫干山超级越野赛", "number": "008" }],
     userInfo: {},
     hasUserInfo: false,
-    latitude: 31.23, 
+    latitude: 31.23,
     longitude: 121.18,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    hotMovies:[]
+    hotMovies: [],
+    mockData: {}
+  },
+  clickMyEvent: function (event) {
+    console.log("event ===> " + event.currentTarget.dataset.eventName)
+
+    wx.showToast({
+      title: '欢迎参加 ' + event.currentTarget.dataset.eventName,
+      icon: 'none',
+      image: '',
+      duration: 2000,
+      mask: true,
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     var that = this;
     common.getHotMovie(function (movies) {
 
@@ -24,10 +42,19 @@ Page({
         hotMovies: movies
       });
       console.log(that.data.hotMovies[0])
-    });  
+    });
     // wx.navigateTo({
     //   url: '../home/home'
     // })
+  },
+
+  initData: function () {
+    common.getMockData(function (rsp) {
+      that.setData({
+        mockData: rsp
+      });
+      console.log(mockData)
+    });
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
@@ -35,7 +62,7 @@ Page({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -61,7 +88,7 @@ Page({
 
   },
 
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
     console.log(util.formatTime(new Date()))
     wx.showToast({
       title: '下拉刷新',
@@ -71,8 +98,8 @@ Page({
       mask: true,  //是否显示透明蒙层，防止触摸穿透，默认：false
       success: function () {
         console.log(util.formatTime(new Date()))
- 
-       
+
+
       }, //接口调用成功的回调函数
       fail: function () { },  //接口调用失败的回调函数
       complete: function () {
@@ -82,8 +109,9 @@ Page({
 
     })
   },
-  onReady:function(){
+  onReady: function () {
     this.bindViewTap()
+    this.initData()
     wx.getLocation({
       type: 'wgs84',
       success: (res) => {
@@ -91,19 +119,19 @@ Page({
         console.log("res == " + res.longitude)
 
         this.setData({
-          latitude :res.latitude, // 经度
-          longitude :res.longitude // 纬度
+          latitude: res.latitude, // 经度
+          longitude: res.longitude // 纬度
         })
 
-       
+
       }
     })
   },
-  moveToLocation:function(){
+  moveToLocation: function () {
     var map = wx.createMapContext("mapId")
     map.moveToLocation()
   },
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -111,7 +139,7 @@ Page({
       hasUserInfo: true
     })
   },
-  onShareAppMessage:function(){
-    
+  onShareAppMessage: function () {
+
   }
 })

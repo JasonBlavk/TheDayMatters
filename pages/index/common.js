@@ -12,6 +12,17 @@ function getCityID(){
   });
 }
 
+function getMockData(callback) {
+  var url ='http://foxleoly.pythonanywhere.com/test'
+  wx.request({
+    url: url,
+    success: function (res) {
+      callback(rsp)
+      console.log('getMockData = '+ rsp);
+    }
+  });
+}
+
 function getHotMovies(callback){
   var url = "https://api-m.mtime.cn/PageSubArea/HotPlayMovies.api?locationId=290"
   wx.request({
@@ -32,5 +43,6 @@ function getHotMovies(callback){
 // }
 
 module.exports = {
-  getHotMovie: getHotMovies
+  getHotMovie: getHotMovies,
+  getMockData: getMockData
 }
