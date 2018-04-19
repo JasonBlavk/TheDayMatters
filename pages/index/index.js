@@ -9,7 +9,7 @@ Page({
   data: {
     myEvent: '我的赛事',
     hotEvent: '热门赛事',
-    myEvents: [{ "eventName": "2018柴古唐斯-括苍山越野赛", "number": "007" },
+    myEvents: [{ "eventName": "2018柴古唐斯括苍山越野赛", "number": "007" },
     { "eventName": "2018莫干山超级越野赛", "number": "008" }],
     userInfo: {},
     hasUserInfo: false,
@@ -46,6 +46,12 @@ Page({
     // wx.navigateTo({
     //   url: '../home/home'
     // })
+  },
+
+  hotEventTap:function() {
+    wx.navigateTo({
+      url: '../home/home'
+    })
   },
 
   initData: function () {

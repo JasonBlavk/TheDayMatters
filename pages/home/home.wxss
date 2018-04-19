@@ -1,1 +1,38 @@
 /* pages/home/home.wxss */
+
+.slide-image {
+  width: 100%;
+  /* height: fit-content; */
+}
+
+.hot-page-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bgm {
+  padding: 20px 0 0 44rpx;
+}
+
+.poem {
+  padding: 44rpx 0 0 44rpx;
+  font-size: 16pt;
+  line-height: 50rpx;
+  font-family: sans-serif;
+}
+
+.author {
+  padding: 20rpx 0 24rpx 320rpx;
+  font-size: 16pt;
+  line-height: 50rpx;
+  font-family: sans-serif;
+}
+
+.poem-content {
+  padding-left: 124rpx;
+  padding-top: 20rpx;
+  font-size: 14pt;
+  color: #333;
+  line-height: 72rpx;
+  font-family: sans-serif;
+}

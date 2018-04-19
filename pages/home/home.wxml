@@ -1,3 +1,35 @@
 <!--pages/home/home.wxml-->
-<swiper></swiper>
-<text>pages/home/home.wxml</text>
+<!-- previous-margin="24rpx" next-margin="24rpx" -->
+<swiper circular="true" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="showCurrentPage">
+  <block wx:for="{{imgUrls}}" wx:for-item="img">
+    <swiper-item>
+      <image src="{{img}}" class="slide-image" mode='aspectFill' />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<audio style="width:100%" class="bgm" poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+
+<view class='hot-page-content'>
+
+  <text class='poem'>Conquest Of Paradise </text>
+  <text class='author'>---Vangelis</text>
+  <text class='poem-content'>理想让我们坚强  
+冲破黑暗的阻挡  
+理想让我们坚强  
+决不放弃希望  
+透过泪水能看见  
+闪烁的星光  
+穿越风和雨跟随  
+生命的光芒 
+......
+</text>
+
+
+</view>
+
+<!-- <button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button>
+<slider bindchange="intervalChange" show-value min="500" max="2000" />
+<slider bindchange="durationChange" show-value min="1000" max="10000" /> -->

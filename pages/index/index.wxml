@@ -22,14 +22,16 @@
     </view>
   </view>
 
-
-
   <view class="hot-event-containner">
-    <text class="hot-event">{{hotEvent}}</text>
+    <text class="hot-event" bindtap='hotEventTap'>{{hotEvent}}</text>
     <view wx:for="{{hotMovies}}" wx:for-index="index" wx:for-item="movie" class='hot-event-list'>
-      <image src="{{movie.img}}" class="movie-img"></image>
-      <text class='movie-director'>{{movie.directorName}}</text>
+      <image src="{{movie.img}}" class="movie-img" mode='aspectFill'></image>
+      <view class='moive-info'>
+        <text class='movie-name'>{{movie.titleCn}}</text>
+        <text class='movie-details'>{{movie.rYear + " / " + movie.type  + " / " + movie.directorName  + " / " + movie.actorName1 + "  " + movie.actorName2}}</text>
+      </view>
     </view>
+
   </view>
 
   <map class="location" id="mapId" show-location="true" latitude="{{latitude}}" longitude="{{longitude}}"></map>
