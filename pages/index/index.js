@@ -5,6 +5,12 @@ var common = require('common.js')
 //获取应用实例
 const app = getApp()
 
+var mockPoints = require('mock.js')
+
+console.log(mockPoints)
+
+var trkPoints = mockPoints.gpxData.gpx.trk.trkseg.trkpt;
+
 Page({
   data: {
     myEvent: '我的赛事',
@@ -13,11 +19,38 @@ Page({
     { "eventName": "2018莫干山超级越野赛", "number": "008" }],
     userInfo: {},
     hasUserInfo: false,
-    latitude: 31.23,
-    longitude: 121.18,
+    latitude: 28.840858422,
+    longitude: 121.112563079,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     hotMovies: [],
-    mockData: {}
+    mockData: {},
+    map: {
+      polyline: [{
+        points: trkPoints,
+        color: "#FF0000DD",
+        width: 2,
+      }],
+      markers: [
+        {
+          iconPath: "./images/marker1.png",
+          width: 16,
+          height: 16,
+          latitude: 28.821888113,
+          longitude: 121.038351272,
+          name: "CP1",
+          desc: ""
+        }, {
+          iconPath: "./images/marker1.png",
+          width: 16,
+          height: 16,
+          latitude: 28.787998972,
+          longitude: 120.913553529,
+          name: "CP5",
+          desc: "黄家寮"
+        }]
+    }
+
+
   },
   clickMyEvent: function (event) {
     console.log("event ===> " + event.currentTarget.dataset.eventName)
@@ -48,7 +81,7 @@ Page({
     // })
   },
 
-  hotEventTap:function() {
+  hotEventTap: function () {
     wx.navigateTo({
       url: '../home/home'
     })
@@ -125,11 +158,9 @@ Page({
         console.log("res == " + res.longitude)
 
         this.setData({
-          latitude: res.latitude, // 经度
-          longitude: res.longitude // 纬度
+          // latitude: res.latitude, // 经度
+          // longitude: res.longitude // 纬度
         })
-
-
       }
     })
   },
