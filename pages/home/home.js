@@ -17,12 +17,12 @@ Page({
     poster: 'https://y.gtimg.cn/music/photo_new/T002R300x300M00000204NIP06LTVu.jpg?max_age=2592000',
     name: 'Conquest Of Paradise',
     author: 'Vangelis',
-    src: 'https://dl.stream.qqmusic.qq.com/C400003XA5lc44B4KB.m4a?vkey=2238D3C79AB753F5B158D0A3C316989AC431967533090F7C35F8B6B891862ADF7CD1F13E9775E7EB1CD80AEFF101D54C023D89BB7080AB16&guid=7181450675&uin=0&fromtag=66',
+    src: 'http://dl.stream.qqmusic.qq.com/C400003XA5lc44B4KB.m4a?vkey=2238D3C79AB753F5B158D0A3C316989AC431967533090F7C35F8B6B891862ADF7CD1F13E9775E7EB1CD80AEFF101D54C023D89BB7080AB16&guid=7181450675&uin=0&fromtag=66',
 
   },
   showCurrentPage:function(e){
-    console.log(e.detail.current)
-    console.log(e.detail.source)
+    // console.log(e.detail.current)
+    // console.log(e.detail.source)
   },
   changeIndicatorDots: function (e) {
     this.setData({

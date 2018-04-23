@@ -9,8 +9,8 @@
     </block>
   </swiper>
 
-
-  <audio style="width:100%" class="bgm" poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+<!-- 
+  <audio style="width:100%" class="bgm" poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio> -->
 
   <view class='hot-page-content'>
 
