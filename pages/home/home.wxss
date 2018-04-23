@@ -1,5 +1,9 @@
 /* pages/home/home.wxss */
 
+.hot-detail-container {
+  overflow-x: false;
+}
+
 .slide-image {
   width: 100%;
   /* height: fit-content; */

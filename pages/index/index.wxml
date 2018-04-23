@@ -16,7 +16,7 @@
         <view class='my-event-list-block'>
           <!-- <image src="{{event.img}}" class="movie-img"></image> -->
           <text class='event-name'>{{event.eventName}}</text>
-          <text class='event-number'>参赛号：{{event.nsumber}}</text>
+          <text class='event-number'>参赛号：{{event.number}}</text>
         </view>
       </view>
     </view>
@@ -33,9 +33,6 @@
     </view>
 
   </view>
-
-  <map class="location" id="mapId" show-location="true" latitude="{{latitude}}" longitude="{{longitude}}" polyline = "{{map.polyline}}" markers = "{{map.markers}}"scale='12'></map>
-
   <!-- <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
   </scroll-view> -->
 

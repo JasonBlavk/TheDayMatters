@@ -1,0 +1,5 @@
+<!--pages/eventDetail/detail.wxml-->
+<view class="detail-container">
+  <text class='eventName'>{{eventName}}</text>
+  <map class="location" id="mapId" show-location="true" latitude="{{latitude}}" longitude="{{longitude}}" polyline="{{map.polyline}}" markers="{{map.markers}}" scale='12'></map>
+</view>

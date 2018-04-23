@@ -106,12 +106,3 @@
   padding: 26rpx;
   font-size: 14pt;
 }
-
-.location {
-  background-color: "#f00";
-  margin-top: 40rpx;
-  padding-left: 20rpx;
-  padding-right: 20rpx;
-  width: 94%;
-  height: 800rpx;
-}
