@@ -48,7 +48,9 @@
   padding: 20rpx 40rpx;
   border-bottom: solid #dadada 0.1rpx;
 }
-
+.my-event-list-block-press {
+  background: #efefef;
+}
 .event-name {
   color: #000;
   font-size: 12pt;

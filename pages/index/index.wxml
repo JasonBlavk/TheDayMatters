@@ -12,8 +12,8 @@
     <text class="user-event">{{myEvent}}</text>
     <!-- <text class="user-event-list">{{myEvent}}</text> -->
     <view class='my-event-list'>
-      <view wx:for="{{myEvents}}" wx:key = "index" wx:for-index="index" wx:for-item="event" data-event-name="{{event.eventName}}" bindtap="clickMyEvent">
-        <view class='my-event-list-block'>
+      <view wx:for="{{myEvents}}" wx:key="index" wx:for-index="index" wx:for-item="event" data-event-name="{{event.eventName}}" bindtap="clickMyEvent">
+        <view class='my-event-list-block' hover-class="my-event-list-block-press">
           <!-- <image src="{{event.img}}" class="movie-img"></image> -->
           <text class='event-name'>{{event.eventName}}</text>
           <text class='event-number'>参赛号：{{event.number}}</text>
