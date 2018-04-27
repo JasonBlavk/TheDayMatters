@@ -6,6 +6,6 @@
   /* align-items: center; */
   background: #fff;
   justify-content: space-between;
-  padding: 40rpx 0;
+  /* padding: 40rpx 0; */
   box-sizing: border-box;
 } 

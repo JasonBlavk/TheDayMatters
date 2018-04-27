@@ -1,12 +1,21 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
+  <swiper class="swiper" circular="true" indicator-dots="{{adv.indicatorDots}}" autoplay="{{adv.autoplay}}" interval="{{adv.interval}}" duration="{{adv.duration}}" bindchange="showCurrentPage">
+    <block wx:for="{{adv.advUrls}}" wx:for-item="img">
+      <swiper-item>
+        <image src="{{img}}" class="slide-image" mode='aspectFill' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- <image bindtap="bindViewTap" class="adv-image" src="{{advUrl}}" background-size="cover"></image> -->
+
+  <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
-  </view>
+  </view> -->
   <view class="user-event-container">
     <view class='user-top-space'></view>
     <text class="user-event">{{myEvent}}</text>

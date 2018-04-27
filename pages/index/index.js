@@ -7,6 +7,16 @@ const app = getApp()
 
 Page({
   data: {
+    adv: {
+      indicatorDots: true,
+      autoplay: true,
+      interval: 3000,
+      duration: 1000,
+      advUrls: ['http://utmbmontblanc.com/fonds/page/utmb16-tds-fo-04-0040__.jpg',
+        "http://utmbmontblanc.com/fonds/page/utmb16-occ-pt-12-0083-6.jpg",
+        "http://utmbmontblanc.com/fonds/page/utmb16-ccc-pt-07-0543__.jpg"],
+
+    },
     myEvent: '我的赛事',
     hotEvent: '热门赛事',
     myEvents: [{ "eventName": "2018柴古唐斯括苍山越野赛", "number": "007" },
@@ -18,14 +28,12 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     hotMovies: [],
     mockData: {},
-
-
   },
   clickMyEvent: function (event) {
     // console.log("event ===> " + event.currentTarget.dataset.eventName)
 
-     wx.navigateTo({
-       url: '../eventDetail/detail?eventName=' + event.currentTarget.dataset.eventName
+    wx.navigateTo({
+      url: '../eventDetail/detail?eventName=' + event.currentTarget.dataset.eventName
     })
 
     // wx.showToast({
@@ -61,12 +69,12 @@ Page({
   },
 
   initData: function () {
-    common.getMockData(function (rsp) {
-      that.setData({
-        mockData: rsp
-      });
-      console.log(mockData)
-    });
+    // common.getMockData(function (rsp) {
+    //   that.setData({
+    //     mockData: rsp
+    //   });
+    //   console.log(mockData)
+    // });
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
