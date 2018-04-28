@@ -1,6 +1,6 @@
 // pages/eventDetail/detail.js
 
-var mockPoints = require('mock.js');
+var mockPoints = require('track-chaigu.js');
 var trkPoints = mockPoints.gpxData_chaigu.gpx.trk.trkseg.trkpt;
 
 var moganPoints = require('track-mo.js');
@@ -20,7 +20,9 @@ Page({
       polyline: [{
         points: trkPoints,
         color: "#00FF00DD",
-        width: 2,
+        width: 4,
+        arrowLine: true,
+        arrowIconPath: "./images/arrow.png"
       }],
       markers: [
         {
@@ -56,8 +58,8 @@ Page({
           iconPath: "./images/start.png",
           width: 32,
           height: 32,
-          latitude: 30.60134277,
-          longitude: 119.8941012,
+          latitude: 30.599010,
+          longitude: 119.894622,
           name: "起点",
           desc: ""
         }, {
@@ -77,7 +79,7 @@ Page({
           name: "CP2",
           desc: ""
 
-        } , {
+        }, {
           iconPath: "./images/marker1.png",
           width: 16,
           height: 16,
