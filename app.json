@@ -10,7 +10,7 @@
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "The Day Matters",
     "navigationBarTextStyle": "#fff",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   },
  
   "networkTimeout": {

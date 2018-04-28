@@ -33572,5 +33572,5 @@ var gpxData = {
   }
 }
 module.exports = {
-  gpxData: gpxData
+  gpxData_chaigu: gpxData
 }  

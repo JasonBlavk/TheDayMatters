@@ -95,7 +95,7 @@
 .hot-event-list {
   /* position: relative; */
   width: 100%;
-  border-bottom: 0.5rpx solid #dadada;
+  border-bottom: 0.1rpx solid #dadada;
   padding: 24rpx 24rpx;
   display: flex;
   flex-direction: row;

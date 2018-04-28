@@ -11,16 +11,16 @@ Page({
       indicatorDots: true,
       autoplay: true,
       interval: 3000,
-      duration: 1000,
+      duration: 500,
       advUrls: ['http://utmbmontblanc.com/fonds/page/utmb16-tds-fo-04-0040__.jpg',
         "http://utmbmontblanc.com/fonds/page/utmb16-occ-pt-12-0083-6.jpg",
         "http://utmbmontblanc.com/fonds/page/utmb16-ccc-pt-07-0543__.jpg"],
 
     },
     myEvent: '我的赛事',
-    hotEvent: '热门赛事',
-    myEvents: [{ "eventName": "2018柴古唐斯括苍山越野赛", "number": "007" },
-    { "eventName": "2018莫干山超级越野赛", "number": "008" }],
+    hotEvent: '热门影视',
+    myEvents: [{ "eventId": 1, "eventName": "2018柴古唐斯括苍山越野赛", "number": "007" },
+    { "eventId": 2, "eventName": "2018莫干山超级越野赛", "number": "008" }],
     userInfo: {},
     hasUserInfo: false,
     latitude: 28.840858422,
@@ -33,7 +33,7 @@ Page({
     // console.log("event ===> " + event.currentTarget.dataset.eventName)
 
     wx.navigateTo({
-      url: '../eventDetail/detail?eventName=' + event.currentTarget.dataset.eventName
+      url: '../eventDetail/detail?eventName=' + event.currentTarget.dataset.eventName + '&eventId=' + event.currentTarget.dataset.eventId
     })
 
     // wx.showToast({
