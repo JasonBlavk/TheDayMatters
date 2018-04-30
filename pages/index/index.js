@@ -64,7 +64,7 @@ Page({
 
   hotEventTap: function () {
     wx.navigateTo({
-      url: '../home/home'
+      url: '../hotMoiveDetail/hotMoiveDetail'
     })
   },
 
