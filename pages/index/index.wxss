@@ -122,3 +122,15 @@
   padding: 26rpx;
   font-size: 14pt;
 }
+
+.btn-contact {
+   align-self: center; 
+  align-items: center;
+  line-height: 60rpx;
+  color: white;
+  background: green;
+  margin: 60rpx 0 60rpx 0;
+  /* width: 20%; */
+  height: 60rpx;
+  font-size: 10pt;
+}
