@@ -43,7 +43,7 @@
 
   </view>
 
-  <button  class="btn-contact" open-type="contact">联系客服</button>
+  <button  class="btn-contact" open-type="contact" session-from="weapp">联系客服</button>
   <!-- <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
   </scroll-view> -->
 
