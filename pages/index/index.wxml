@@ -39,7 +39,7 @@
         <text class='movie-name'>{{movie.titleCn}}</text>
         <view>
           <text class='movie-rater-tag'>观众评分</text>
-          <text class='movie-rater'>{{"  " + movie.ratingFinal}}</text>
+          <text class='movie-rater'>{{movie.ratingFinal}}</text>
         </view>
 
         <text class='movie-details'>{{movie.rYear + " / " + movie.type  + " / " + movie.directorName  + " / " + movie.actorName1 + "  " + movie.actorName2}}</text>
