@@ -37,13 +37,19 @@
       <image src="{{movie.img}}" class="movie-img" mode='aspectFill'></image>
       <view class='moive-info'>
         <text class='movie-name'>{{movie.titleCn}}</text>
+        <view>
+          <text class='movie-rater-tag'>观众评分</text>
+          <text class='movie-rater'>{{"  " + movie.ratingFinal}}</text>
+        </view>
+
         <text class='movie-details'>{{movie.rYear + " / " + movie.type  + " / " + movie.directorName  + " / " + movie.actorName1 + "  " + movie.actorName2}}</text>
+
       </view>
     </view>
 
   </view>
 
-  <button  class="btn-contact" open-type="contact" session-from="weapp">联系客服</button>
+  <button class="btn-contact" open-type="contact" session-from="weapp">联系客服</button>
   <!-- <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
   </scroll-view> -->
 

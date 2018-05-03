@@ -112,16 +112,30 @@
   flex-direction: column;
 }
 
+.movie-name {
+  padding: 16rpx 26rpx 10rpx 26rpx ;
+  font-size: 15pt;
+}
+
 .movie-details {
   font-size: 12pt;
   color: #aaa;
   padding-left: 26rpx;
+  margin-top: 10rpx;
 }
 
-.movie-name {
-  padding: 26rpx;
-  font-size: 14pt;
+.movie-rater-tag{
+  font-size: 12pt;
+  color: #111;
+  padding-left: 26rpx;
+  margin-top: 10rpx;
 }
+.movie-rater{
+  font-size: 12pt;
+  color: #f57e08;
+  padding-left: 16rpx;
+}
+
 
 .btn-contact {
    align-self: center; 
