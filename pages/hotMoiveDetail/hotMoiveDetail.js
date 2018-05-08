@@ -4,6 +4,17 @@ Page({
    * 页面的初始数据
    */
   data: {
+    nodes: [{
+      name: 'div',
+      attrs: {
+        class: 'div_class',
+        style: 'line-height: 60px; color: red; padding-left:20px'
+      },
+      children: [{
+        type: 'text',
+        text: 'Hello&nbsp; Every Runners!!!'
+      }]
+    }],
     imgUrls: [
       'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',

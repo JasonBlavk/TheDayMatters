@@ -33,7 +33,7 @@
 
   <view class="hot-event-containner">
     <text class="hot-event" bindtap='hotEventTap'>{{hotEvent}}</text>
-    <view wx:for="{{hotMovies}}" wx:for-index="index" wx:for-item="movie" class='hot-event-list'>
+    <view wx:for="{{hotMovies}}" wx:for-index="index" wx:for-item="movie" class='hot-event-list' data-movie-id='{{index}}' bindtap="clickMoiveItem">
       <image src="{{movie.img}}" class="movie-img" mode='aspectFill'></image>
       <view class='moive-info'>
         <text class='movie-name'>{{movie.titleCn}}</text>

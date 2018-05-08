@@ -68,6 +68,21 @@ Page({
     })
   },
 
+  clickMoiveItem: function (movie) {
+    var that = this;
+    console.log("movie  ===> " + movie.currentTarget.dataset.movieId)
+   wx.showToast({
+     title: that.data.hotMovies[movie.currentTarget.dataset.movieId].titleCn,
+      icon: 'none',
+      image: '',
+      duration: 2000,
+      mask: true,
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  },
+
   initData: function () {
     // common.getMockData(function (rsp) {
     //   that.setData({

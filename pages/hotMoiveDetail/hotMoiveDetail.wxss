@@ -3,7 +3,9 @@
 .hot-detail-container {
   overflow-x: false;
 }
-
+/* .div_class{
+  padding-left: 20rpx;
+} */
 .slide-image {
   width: 100%;
   /* height: fit-content; */
